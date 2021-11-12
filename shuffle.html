@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="shuffle.css" />
+  </head>
+  <body onload="initializeBoxes();">
+    <section class="main">
+      <div class="heading">
+        <header class="heading-title">Shuffle And Sort</header>
+      </div>
+
+      <div class="shuffleboard">
+        <div class="shuffleboard-buttons">
+          <button onclick="shuffleBoxes();">Shuffle</button>
+          <button onclick="sortBoxes();">Sort</button>
+        </div>
+
+        <div id="shuffleboard-boxes" class="shuffleboard-boxes">
+          <span>loading...</span>
+        </div>
+      </div>
+      <div class="author">
+        <i>Shuffle and sort by Vinay M</i>
+      </div>
+    </section>
+    <script src="shuffle.js"></script>
+  </body>
+</html>

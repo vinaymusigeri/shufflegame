@@ -1,0 +1,191 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  --primary1: #000000;
+  --primary2: #2b8ead;
+  --primary3: #333333;
+  --primary4: #6f98a8;
+  --primary5: #ffffff;
+  --primary6: #bfbfbf;
+  --primary7: #efefef;
+  --primary8: #2f454e;
+  --primary9: #72c3dc;
+  margin: 0;
+}
+
+/** incase of fixed width for the box in the 768 like width 200px and height 200px then need to uncomment this */
+.main {
+  /* max-width: 1200px;
+  margin: 0 auto; */
+  background-color: var(--primary5);
+}
+
+.heading {
+  width: 100%;
+  height: 50px;
+  background-color: var(--primary1);
+  color: var(--primary5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.shuffleboard {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.shuffleboard-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.shuffleboard-buttons button {
+  width: 100px;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: var(--primary5);
+  background-color: var(--primary9);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 3px var(--primary2);
+  margin: 0 0.5rem;
+}
+
+.shuffleboard-buttons button:active {
+  background-color: var(--primary9);
+  box-shadow: 0 2px var(--primary2);
+  transform: translateY(1px);
+}
+
+.shuffleboard-boxes {
+  display: flex;
+  flex-direction: column;
+}
+
+.shuffleboard-boxes-box {
+  width: 100%;
+  height: 50px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: var(--primary7);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shuffleboard-boxes-box-banner {
+  position: absolute;
+  left: 0;
+  width: 10px;
+  height: 100%;
+}
+
+.shuffleboard-boxes-box-label {
+  font-size: 1.5rem;
+  color: var(--primary1);
+}
+
+.author {
+  display: flex;
+  justify-content: center;
+  color: var(--primary1);
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    background: var(--primary7);
+  }
+  .heading {
+    background: var(--primary5);
+    color: var(--primary1);
+    margin-bottom: 0;
+  }
+
+  .shuffleboard {
+    flex-direction: row;
+
+    border-top: 2px solid var(--primary6);
+  }
+
+  .shuffleboard-buttons {
+    flex: 1;
+    order: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .shuffleboard-buttons button {
+    width: 250px;
+    margin: 1rem;
+  }
+
+  .shuffleboard-boxes {
+    flex: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .shuffleboard-boxes-box {
+    width: calc(100% / 3); /* fixed width of 200px uncomment rest */
+    height: calc(100vh / 4);
+    margin-bottom: 0;
+  }
+
+  .shuffleboard-boxes-box-banner {
+    width: 100%;
+  }
+  .shuffleboard-boxes-box-label {
+    z-index: 1;
+    color: var(--primary5);
+    font-size: 5rem;
+  }
+
+  .author {
+    height: 4rem;
+  }
+}
+
+/** incase of fixed width in the 768 like width 200px and height 200px then need to uncomment this
+/* @media only screen and (min-width: 992px) {
+  .shuffleboard-boxes-box {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .shuffleboard-boxes-box {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 0;
+  }
+} */
